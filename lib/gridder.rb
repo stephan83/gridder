@@ -1,5 +1,5 @@
 #lib/gridder.rb
 
 module Authr
-  require 'gridder/engine' if defined?(Rails)
+  require 'engine' if defined?(Rails)
 end
