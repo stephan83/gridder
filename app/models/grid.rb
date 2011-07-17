@@ -1,3 +1,5 @@
+#app/models/grid.rb
+
 require 'active_model'
 
 class Grid
