@@ -11,19 +11,23 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "gridder"
-  gem.homepage = "http://github.com/stephan83/gridder"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "stephan.florquin@gmail.com"
-  gem.authors = ["stephan83"]
-  # dependencies defined in Gemfile
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+    gem.name = "gridder"
+    gem.homepage = "http://github.com/stephan83/gridder"
+    gem.license = "MIT"
+    gem.summary = %Q{CSS Grid System for Rails 3}
+    gem.description = %Q{CSS Grid System for Rails 3. Generates stylesheets on the fly.}
+    gem.email = "stephan.florquin@gmail.com"
+    gem.authors = ["Stephan Florquin"]
+    # dependencies defined in Gemfile
+  end
+  Jeweler::RubygemsDotOrgTasks.new
+rescue
+  puts "Jeweler or one of its dependencies is not installed."
 end
-Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
