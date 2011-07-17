@@ -4,7 +4,6 @@ require 'gridder'
 require 'rails'
 
 module Gridder
- class Engine < Rails::Engine
-    engine_name :gridder
+  class Engine < Rails::Engine
   end
 end
