@@ -20,7 +20,7 @@ module Gridder
     
     def width
       begin
-        (@num_cols.to_i - 1) * (@col_width.to_i +  @gutter.to_i) + @col_width.to_i
+        (@num_cols.to_i) * (@col_width.to_i +  @gutter.to_i)
       rescue
         0
       end
@@ -34,6 +34,10 @@ module Gridder
     
     def namespace
       'grid_' + @num_cols.to_s + '_' + @col_width.to_s + '_' + @gutter.to_s
+    end
+    
+    def container
+      namespace + '_container'
     end
     
     def col(num)

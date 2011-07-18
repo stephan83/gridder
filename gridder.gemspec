@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "app/controllers/gridder/grid_controller.rb",
+    "app/helpers/gridder/gridder_helper.rb",
     "app/models/gridder/grid.rb",
     "app/views/gridder/grid/grid.erb",
     "gridder.gemspec",
