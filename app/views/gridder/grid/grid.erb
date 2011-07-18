@@ -1,0 +1,105 @@
+/*
+  https://github.com/stephan83/gridder
+
+  Licensed under MIT.
+*/
+
+/* `Container
+------------------------------------------------------------------------------*/
+
+<%= namespace_for @grid %> {
+  margin: 0 auto;
+  width: <%= @grid.width %>px;
+  padding: 0 <%= (@grid.gutter * 0.5).to_i %>px;
+}
+
+/* `Global
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols - 1) do |c| %>
+<%= classheader_for @grid, 'grid_' + c.to_s %>,
+<% end %>
+<%= classheader_for @grid, 'grid_' + @grid.num_cols.to_s %> {
+  padding: <%= (@grid.gutter * 0.5).to_i %>px;
+  display: inline;
+  float: left;
+}
+
+<% 1.upto(@grid.num_cols - 2) do |c| %>
+<%= classheader_for @grid, 'push_' + c.to_s %>,
+<%= classheader_for @grid, 'pull_' + c.to_s %>,
+<% end %>
+<%= classheader_for @grid, 'push_' + (@grid.num_cols - 1).to_s %>,
+<%= classheader_for @grid, 'pull_' + (@grid.num_cols - 1).to_s %> {
+  position: relative;
+}
+
+/* `Columns
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols) do |c| %>
+<%= class_for @grid, 'grid_' + c.to_s do %>
+  width: <%= (c - 1) * (@grid.col_width +  @grid.gutter) + @grid.col_width %>px;
+<% end %>
+
+<% end %>
+
+/* `Prefix
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols - 1) do |c| %>
+<%= class_for @grid, 'prefix_' + c.to_s do %>
+  padding-left: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
+<% end %>
+
+<% end %>
+
+/* `Suffix
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols - 1) do |c| %>
+<%= class_for @grid, 'suffix_' + c.to_s do %>
+  padding-right: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
+<% end %>
+
+<% end %>
+
+/* `Push
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols - 1) do |c| %>
+<%= class_for @grid, 'push_' + c.to_s do %>
+  left: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
+<% end %>
+
+<% end %>
+
+/* `Pull
+------------------------------------------------------------------------------*/
+
+<% 1.upto(@grid.num_cols - 1) do |c| %>
+<%= class_for @grid, 'push_' + c.to_s do %>
+  left: -<%= (c) * (@grid.col_width +  @grid.gutter) %>px;
+<% end %>
+
+<% end %>
+
+/* `Utils
+------------------------------------------------------------------------------*/
+
+<%= class_for @grid, 'alpha' do %>
+  margin-left: 0;
+<% end %>
+
+<%= class_for @grid, 'omega' do %>
+  margin-right: 0;
+<% end %>
+
+<%= class_for @grid, 'clear' do %>
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+<% end %>

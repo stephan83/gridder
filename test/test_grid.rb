@@ -35,6 +35,9 @@ class GridTest < ActiveSupport::TestCase
     assert Gridder::Grid.new(12, 1, 20).valid?
     assert Gridder::Grid.new(12, 60, -20).invalid?
     assert Gridder::Grid.new(12, 60, 0).valid?
+    assert Gridder::Grid.new(12, 60, 11).invalid?
+    assert Gridder::Grid.new(12, 200, 100).invalid?
+    assert Gridder::Grid.new(200, 60, 20).invalid?
   end
   
 end
