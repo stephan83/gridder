@@ -2,8 +2,6 @@
 
 module Gridder
   class GridController < ApplicationController
-  
-    include Gridder::GridHelper
     
     caches_page :grid
    

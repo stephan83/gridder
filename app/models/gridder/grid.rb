@@ -32,5 +32,41 @@ module Gridder
       @gutter = @gutter.to_i
     end
     
+    def namespace
+      'grid_' + @num_cols.to_s + '_' + @col_width.to_s + '_' + @gutter.to_s
+    end
+    
+    def col(num)
+      namespace + '_col_' + num.to_s
+    end
+    
+    def prefix(num)
+      namespace + '_prefix_' + num.to_s
+    end
+    
+    def suffix(num)
+      namespace + '_suffix_' + num.to_s
+    end
+    
+    def push(num)
+      namespace + '_push_' + num.to_s
+    end
+    
+    def pull(num)
+      namespace + '_pull_' + num.to_s
+    end
+    
+    def alpha
+      namespace + '_alpha'
+    end
+    
+    def omega
+      namespace + '_omega'
+    end
+    
+    def clear
+      namespace + '_clear'
+    end
+    
   end
 end

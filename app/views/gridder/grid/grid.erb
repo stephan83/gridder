@@ -7,7 +7,7 @@
 /* `Container
 ------------------------------------------------------------------------------*/
 
-<%= namespace_for @grid %> {
+.<%= @grid.namespace %> {
   margin: 0 auto;
   width: <%= @grid.width %>px;
   padding: 0 <%= (@grid.gutter * 0.5).to_i %>px;
@@ -17,20 +17,20 @@
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols - 1) do |c| %>
-<%= classheader_for @grid, 'grid_' + c.to_s %>,
+.<%= @grid.col c %>,
 <% end %>
-<%= classheader_for @grid, 'grid_' + @grid.num_cols.to_s %> {
+.<%= @grid.col @grid.num_cols %> {
   padding: <%= (@grid.gutter * 0.5).to_i %>px;
   display: inline;
   float: left;
 }
 
 <% 1.upto(@grid.num_cols - 2) do |c| %>
-<%= classheader_for @grid, 'push_' + c.to_s %>,
-<%= classheader_for @grid, 'pull_' + c.to_s %>,
+.<%= @grid.push c %>,
+.<%= @grid.pull c %>,
 <% end %>
-<%= classheader_for @grid, 'push_' + (@grid.num_cols - 1).to_s %>,
-<%= classheader_for @grid, 'pull_' + (@grid.num_cols - 1).to_s %> {
+.<%= @grid.push @grid.num_cols - 1 %>,
+.<%= @grid.pull @grid.num_cols - 1 %> {
   position: relative;
 }
 
@@ -38,68 +38,63 @@
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols) do |c| %>
-<%= class_for @grid, 'grid_' + c.to_s do %>
+.<%= @grid.col c %> {
   width: <%= (c - 1) * (@grid.col_width +  @grid.gutter) + @grid.col_width %>px;
-<% end %>
-
+}
 <% end %>
 
 /* `Prefix
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols - 1) do |c| %>
-<%= class_for @grid, 'prefix_' + c.to_s do %>
-  padding-left: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
-<% end %>
-
+.<%= @grid.prefix c %> {
+  padding-left: <%= c * (@grid.col_width +  @grid.gutter) %>px;
+}
 <% end %>
 
 /* `Suffix
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols - 1) do |c| %>
-<%= class_for @grid, 'suffix_' + c.to_s do %>
-  padding-right: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
-<% end %>
-
+.<%= @grid.suffix c %> {
+  padding-right: <%= c * (@grid.col_width +  @grid.gutter) %>px;
+}
 <% end %>
 
 /* `Push
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols - 1) do |c| %>
-<%= class_for @grid, 'push_' + c.to_s do %>
-  left: <%= (c) * (@grid.col_width +  @grid.gutter) %>px;
-<% end %>
-
+.<%= @grid.push c %> {
+  left: <%= c * (@grid.col_width +  @grid.gutter) %>px;
+}
 <% end %>
 
 /* `Pull
 ------------------------------------------------------------------------------*/
 
 <% 1.upto(@grid.num_cols - 1) do |c| %>
-<%= class_for @grid, 'push_' + c.to_s do %>
-  left: -<%= (c) * (@grid.col_width +  @grid.gutter) %>px;
-<% end %>
-
+.<%= @grid.pull c %> {
+  left: -<%= c * (@grid.col_width +  @grid.gutter) %>px;
+}
 <% end %>
 
 /* `Utils
 ------------------------------------------------------------------------------*/
 
-<%= class_for @grid, 'alpha' do %>
+.<%= @grid.alpha %> {
   margin-left: 0;
-<% end %>
+}
 
-<%= class_for @grid, 'omega' do %>
+.<%= @grid.omega %> {
   margin-right: 0;
-<% end %>
+}
 
-<%= class_for @grid, 'clear' do %>
+.<%= @grid.clear %> {
   clear: both;
   display: block;
   overflow: hidden;
   visibility: hidden;
   width: 0;
   height: 0;
-<% end %>
+}
