@@ -1,5 +1,3 @@
-#app/models/grid.rb
-
 require 'active_model'
 
 module Gridder

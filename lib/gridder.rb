@@ -1,5 +1,4 @@
-#lib/gridder.rb
+require "gridder/engine"
 
 module Gridder
-  require 'engine' if defined?(Rails)
 end

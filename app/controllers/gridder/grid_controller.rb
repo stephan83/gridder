@@ -1,5 +1,3 @@
-#app/controllers/grid_controller.rb
-
 module Gridder
   class GridController < ApplicationController
     
@@ -12,7 +10,7 @@ module Gridder
       
       if @grid.valid?
         @grid.intefy!
-        render :layout => false, :view => 'gridder/grid'
+        render :layout => false, :view => 'grid/grid'
       else
         render :text => '/* invalid dimensions */'
       end

@@ -1,5 +1,4 @@
-require 'helper'
-require 'grid'
+require 'test_helper'
  
 class GridTest < ActiveSupport::TestCase
 
