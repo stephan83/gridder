@@ -5,8 +5,7 @@ CSS Grid System for Rails 3. Generates stylesheets on the fly, similar to the on
 == Usage
 
 * Require gem
-* Add a route (i.e match 'stylesheets/grid-:num_cols-:col_width-:gutter.css' => 'gridder/grid#grid')
-* Link stylesheet (i.e /stylesheets/grid-12-60-20.css)
+* Link stylesheet (i.e /gridder/grid-12-60-20.css)
 
 == Contributing to gridder
  
