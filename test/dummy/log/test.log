@@ -1,0 +1,53 @@
+
+
+Started GET "/gridder/grid-12-60-20" for 127.0.0.1 at 2011-07-20 22:07:52 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:08:21 +0200
+
+
+Started GET "/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:09:04 +0200
+
+
+Started GET "/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:09:30 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:10:10 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:11:56 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-20 22:13:34 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-21 00:21:23 +0200
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-22 21:58:53 +0200
+Processing by Gridder::GridController#grid as HTML
+  Parameters: {"num_cols"=>"12", "col_width"=>"60", "gutter"=>"20"}
+  Rendered /Users/stephan/Projects/rails/engines/gridder/app/views/gridder/grid/grid.erb (16.6ms)
+Completed 200 OK in 201ms (Views: 200.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-22 22:00:06 +0200
+Processing by Gridder::GridController#grid as HTML
+  Parameters: {"num_cols"=>"12", "col_width"=>"60", "gutter"=>"20"}
+  Rendered /Users/stephan/Projects/rails/engines/gridder/app/views/gridder/grid/grid.erb (11.2ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gridders/grid-12-60-20.css" for 127.0.0.1 at 2011-07-22 22:04:01 +0200
+
+
+Started GET "/gridder/grid-120-60-20.css" for 127.0.0.1 at 2011-07-22 22:10:18 +0200
+Processing by Gridder::GridController#grid as HTML
+  Parameters: {"num_cols"=>"120", "col_width"=>"60", "gutter"=>"20"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grid-12-60-20.css" for 127.0.0.1 at 2011-07-22 22:10:18 +0200
+Processing by Gridder::GridController#grid as HTML
+  Parameters: {"num_cols"=>"12", "col_width"=>"60", "gutter"=>"20"}
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)

@@ -2,7 +2,8 @@ module Gridder
   class GridController < ApplicationController
     
     caches_page :grid
-   
+    
+    # Outputs CSS for a grid
     def grid
       self.response.headers['Content-Type'] = 'text/css'
       
@@ -12,7 +13,7 @@ module Gridder
         @grid.intefy!
         render :layout => false, :view => 'grid/grid'
       else
-        render :text => '/* invalid dimensions */'
+        head :bad_request
       end
     end
     

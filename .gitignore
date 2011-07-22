@@ -26,11 +26,12 @@ Gemfile.lock
 #
 # For MacOS:
 #
-#.DS_Store
+.DS_Store
 
 # For TextMate
-#*.tmproj
-#tmtags
+*.tmproj
+tmtags
+.rvmrc
 
 # For emacs:
 #*~
