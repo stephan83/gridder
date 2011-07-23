@@ -46,3 +46,6 @@ tmtags
 
 # For rubinius:
 #*.rbc
+
+*.log
+*.sqlite3
