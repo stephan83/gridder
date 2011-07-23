@@ -10,6 +10,8 @@ CSS Grid System for Rails 3. Generates stylesheets on the fly, similar to the on
 
 * Add gem to Gemfile
 *   bundle update
+* Mount engine in routes.rb
+    mount Gridder::Engine => '/gridder'
 * Include helper in controllers that need it
     helper Gridder::GridsHelper
 * Link stylesheet(s)
@@ -31,6 +33,17 @@ CSS Grid System for Rails 3. Generates stylesheets on the fly, similar to the on
         <p class="<%= g.clear %>">&nbsp</p>
       </div>
     <% end %>
+
+== Configuration
+
+You  can modify the following options in an initializer:
+
+* Maximum number of columns (default 64)
+    Gridder::Engine.config.max_cols
+* Maximum width of a grid (default 2048)
+    Gridder::Engine.config.max_width
+
+If you attempt to load the stylesheet for a grid that doesn't meet these requirements, it will return a :not_acceptable header.
 
 == Contributing to gridder
  
