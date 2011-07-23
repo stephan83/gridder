@@ -2,7 +2,6 @@ require 'test_helper.rb'
 
 class GridGeneratorTest < Rails::Generators::TestCase
   
-  # TODO: must be a better way to load generators
   require File.expand_path('../../lib/generators/gridder/grid_generator', File.dirname(__FILE__))
   
   tests Gridder::GridGenerator
