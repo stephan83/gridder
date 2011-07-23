@@ -28,7 +28,7 @@ CSS Grid System for Rails 3. Generates stylesheets on the fly, similar to the on
         <p class="<%= g.clear %>">&nbsp</p>
         <p class="<%= g.col 3 + ' ' + g.prefix 3 %>">Hello</p>
         <p class="<%= g.col 6 %>">Hello</p>
-	    <p class="<%= g.clear %>">&nbsp</p>
+        <p class="<%= g.clear %>">&nbsp</p>
       </div>
     <% end %>
 
