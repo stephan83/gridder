@@ -1,7 +1,7 @@
 module Gridder
   class GridsController < ApplicationController
     
-    #caches_page :grid
+    caches_page :grid
     
     # Outputs CSS for a grid
     def show
