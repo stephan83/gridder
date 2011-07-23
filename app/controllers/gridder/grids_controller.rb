@@ -5,7 +5,7 @@ module Gridder
     
     # Outputs CSS for a grid
     def show
-      @grid = Gridder::Grid.new(*params[:id].split('-'))
+      @grid = Gridder::Grid.new(*params[:id].split('_'))
       
       if @grid.valid?
         @grid.intefy!

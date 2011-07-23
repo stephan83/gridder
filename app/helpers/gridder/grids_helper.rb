@@ -12,7 +12,7 @@ module Gridder
     
     # Returns the path to a grid for the fiven arguments
     def grid_stylesheet(num_cols, col_width, gutter)
-      grid_path num_cols.to_s + '-' + col_width.to_s + '-' + gutter.to_s
+      grid_path num_cols.to_s + '_' + col_width.to_s + '_' + gutter.to_s
     end
     
   end
