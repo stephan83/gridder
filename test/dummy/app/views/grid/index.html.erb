@@ -1,7 +1,6 @@
 <%= stylesheet_link_tag grid_stylesheet(12, 40, 30) %>
 
 <% with_grid 12, 40, 30 do |g| %>
-
   <div class="<%= g.container %>">
     <p class="<%= g.col 4 %>">Hello</p>
     <p class="<%= g.col 4 %>">Hello</p>
@@ -11,8 +10,11 @@
     <p class="<%= g.col 3 %>">Hello</p>
     <p class="<%= g.col 3 %>">Hello</p>
     <p class="<%= g.col 3 %>">Hello</p>
+    <p class="<%= g.clear %>">&nbsp</p>
+    <p class="<%= g.col(3) + ' ' + g.prefix(3) %>">Hello</p>
+    <p class="<%= g.col 6 %>">Hello</p>
+    <p class="<%= g.clear %>">&nbsp</p>
   </div>
-
 <% end %>
 
 <%= stylesheet_link_tag grid_stylesheet(12, 40, 0) %>
