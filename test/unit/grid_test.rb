@@ -1,5 +1,5 @@
 require 'test_helper'
- 
+
 class GridTest < ActiveSupport::TestCase
 
   test 'load Grid model correctly' do
@@ -18,7 +18,7 @@ class GridTest < ActiveSupport::TestCase
     grid.gutter = 30
     assert_same 30, grid.gutter
   end
-  
+
   test 'validate correctly' do
     assert Gridder::Grid.new(12, 60, 20).valid?
     assert Gridder::Grid.new(false, false, false).invalid?
@@ -38,5 +38,5 @@ class GridTest < ActiveSupport::TestCase
     assert Gridder::Grid.new(12, 200, 100).invalid?
     assert Gridder::Grid.new(200, 60, 20).invalid?
   end
-  
+
 end

@@ -714,3 +714,39 @@ Started GET "/gridder/grids/12_60_20.css" for 127.0.0.1 at 2011-07-23 13:11:33 +
 Processing by Gridder::GridsController#show as CSS
   Parameters: {"id"=>"12_60_20"}
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/grid/index" for 127.0.0.1 at 2011-07-23 22:13:39 +0200
+Processing by GridController#index as HTML
+  Rendered grid/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grids/120_60_20.css" for 127.0.0.1 at 2011-07-23 22:13:39 +0200
+Processing by Gridder::GridsController#show as CSS
+  Parameters: {"id"=>"120_60_20"}
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grids/12_60_20.css" for 127.0.0.1 at 2011-07-23 22:13:39 +0200
+Processing by Gridder::GridsController#show as CSS
+  Parameters: {"id"=>"12_60_20"}
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/grid/index" for 127.0.0.1 at 2011-07-23 22:36:59 +0200
+Processing by GridController#index as HTML
+  Rendered grid/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 69ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grids/120_60_20.css" for 127.0.0.1 at 2011-07-23 22:36:59 +0200
+Processing by Gridder::GridsController#show as CSS
+  Parameters: {"id"=>"120_60_20"}
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/gridder/grids/12_60_20.css" for 127.0.0.1 at 2011-07-23 22:36:59 +0200
+Processing by Gridder::GridsController#show as CSS
+  Parameters: {"id"=>"12_60_20"}
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)

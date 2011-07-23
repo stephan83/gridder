@@ -1,12 +1,12 @@
 module Gridder
   class GridsController < ApplicationController
-    
+
     caches_page :grid
-    
+
     # Outputs CSS for a grid
     def show
       @grid = Gridder::Grid.new(*params[:id].split('_'))
-      
+
       if @grid.valid?
         @grid.intefy!
         respond_to do |format|
@@ -19,6 +19,6 @@ module Gridder
         head :not_acceptable
       end
     end
-    
+
   end
 end
