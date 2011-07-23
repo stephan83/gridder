@@ -5,10 +5,10 @@ module Gridder
     include ActiveModel::Validations
   
     validates_presence_of :num_cols, :col_width, :gutter
-    validates_numericality_of :num_cols, :only_integer => true, :greater_than => 0, :less_than_or_equal_to => 64
+    validates_numericality_of :num_cols, :only_integer => true, :greater_than => 0, :less_than_or_equal_to => Engine.config.max_cols
     validates_numericality_of :col_width, :only_integer => true, :greater_than => 0
     validates_numericality_of :gutter, :only_integer => true, :greater_than_or_equal_to => 0, :even => true
-    validates_numericality_of :width, :only_integer => true, :less_than_or_equal_to => 2048
+    validates_numericality_of :width, :only_integer => true, :less_than_or_equal_to => Engine.config.max_width
   
     attr_accessor :num_cols, :col_width, :gutter
     
